@@ -1,0 +1,1 @@
+export const DASH_APPLY_ROUTE = '/selfEnrollment'
