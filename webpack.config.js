@@ -15,6 +15,10 @@ module.exports = {
   output: {
     path: __dirname + '/build/',
   },
+  devServer:{
+    historyApiFallback:true,
+    open:true
+  },
   module: {
     rules: [
       {
