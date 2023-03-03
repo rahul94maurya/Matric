@@ -95,7 +95,7 @@ const Login = () => {
                 {errorObj && errorObj[`email`] && <span className="errorMsg">{errorObj[`email`]}</span>}
                 <div className="mt-3 fw-bold form-label">Password</div>
                 <input
-                  type="text"
+                  type="password"
                   placeholder="Enter your password"
                   className="form-control"
                   name="password"
