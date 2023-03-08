@@ -6,52 +6,17 @@
 .header-title{
     color: #DF6404;
 }
-.login-container {
-    box-sizing: border-box !important;
-    width: 35%;
+
+.response{
+    top: 30%;
     background: #FBFBFB 0% 0% no-repeat padding-box;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 .errorMsg{
     color: red;
 }
 
-@media screen and (max-width: 1024px) {
-    .login-container {
-        width: 50%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .login-container {
-        width: 60%;
-    }
-}
-
-@media screen and (max-width: 425px) {
-    .login-container {
+@media (max-width:576px){
+    .response{
         width: 90%;
-        margin-top: 50px;
-    }
-    
-}
-
-@media screen and (max-width: 375px) {
-    .login-container {
-        padding: 25px 32px;
-    }
-    .header{
-        position: relative !important;
-        left: 10px !important;
-    }
-
-    .login-container .form-title {
-        font-size: 22px !important;
-    }
-
-    .login-container form {
-        margin-top: 20px !important;
     }
 }

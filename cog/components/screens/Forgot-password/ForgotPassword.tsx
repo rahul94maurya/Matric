@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { useState } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
+import './style.css';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -17,7 +18,7 @@ const ForgotPassword = () => {
   };
 
   return (
-    <div className="login-container card">
+    <div className="container col-lg-4 col-md-6 position-relative card forgot">
       <div className="row m-0">
         <div className="col-lg-12">
           <h3 className="d-flex align-items-center justify-content-center">
