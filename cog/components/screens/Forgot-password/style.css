@@ -1,0 +1,9 @@
+.forgot{
+    top: 40%;
+    background: #FBFBFB 0% 0% no-repeat padding-box;
+}
+@media (max-width:576px){
+    .forgot{
+        width: 90%;
+    }
+}
