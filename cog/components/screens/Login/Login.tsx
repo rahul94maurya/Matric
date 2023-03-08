@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { emailValidation } from "../../../utility/emailValidation";
 import { passwordValidation } from "../../../utility/passwordValidation";
 import "./style.css";
@@ -11,6 +11,7 @@ const initialState = {
 const Login = () => {
   const [errorObj, setErrorObj] = useState<any>({})
   const [form, setForm] = useState({...initialState})
+  const navigate = useNavigate()
 
 
   const handleChange = (e: any) => {
@@ -24,7 +25,7 @@ const Login = () => {
     setErrorObj({ ...errors })
   }
 
-  const loginValidation = (name: string, value: string,) => {
+  const loginValidation = () : boolean => {
     let hasError = false;
     let passwordLength = form.password?.length > 6;
     let error = { ...errorObj }
@@ -49,13 +50,15 @@ const Login = () => {
     setErrorObj({ ...error })
     return hasError;
   }
-  const handleSubmit = (e: any,) => {
-    let { name, value } = e.target;
+  const handleSubmit = (e: any) => {
     e.preventDefault();
-    if (loginValidation(name, value)) {
+    if (loginValidation()) {
       return
     }
-    // console.log("value")
+    // console.log("value",form)
+    localStorage.setItem("data",JSON.stringify(form))
+    navigate("/dashboard")
+  
 
   };
 
@@ -118,7 +121,7 @@ const Login = () => {
                 to="forgot-password"
                 className="text-decoration-none common-link"
               >
-                <div className="d-flex align-items-center justify-content-end mt-3">
+                <div className="d-flex align-items-center justify-content-end">
                   Forgot Password
                 </div>
               </Link>
