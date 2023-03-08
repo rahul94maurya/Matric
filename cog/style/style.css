@@ -45,3 +45,16 @@ body {
     font-size: 16px !important;
     font-weight: 500 !important;
 }
+
+.main-box {
+    position: relative;
+    left: 300px;
+    top: 100px;
+}
+
+.main-content {
+    width: calc(100vw - 350px);
+    margin-left: 295px;
+    margin-top: 40px;
+    transition: all 0.5s;
+}
