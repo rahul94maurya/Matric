@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { emailValidation } from "../../../utility/emailValidation";
 import { passwordValidation } from "../../../utility/passwordValidation";
+import HeaderLogo from "../../common/HeaderLogo/HeaderLogo";
 import "./style.css";
 
 const initialState = {
@@ -65,18 +66,7 @@ const Login = () => {
 
   return (
     <>
-      <div className="row m-0">
-        <div className="col-lg-12">
-          <div className="position-relative header">
-            <Link to="/login" className="text-decoration-none text-dark">
-              <span className="fw-bold fs-5">think</span>
-              <span className="fs-5">bridge</span>
-              <span className="fs-5">|</span>
-              <span className="header-title fs-5">there's a new there</span>
-            </Link>
-          </div>
-        </div>
-      </div>
+      <HeaderLogo/>
       <div className="container  col-lg-4 col-md-6 position-relative card response">
         <div className="row m-0">
           <div className="col-lg-12">

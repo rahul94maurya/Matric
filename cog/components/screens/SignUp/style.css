@@ -7,50 +7,22 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.signup-container {
-    box-sizing: border-box !important;
-    width: 35%;
+
+.card-response{
+    top: 12%;
     background: #FBFBFB 0% 0% no-repeat padding-box;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
+body{
+    overflow-y: scroll;
+}
+
 .star-mark{
     color: red;
 }
-.errorMsg{
-    color: red;
-    font-size: 14px;
-}
-@media screen and (max-width: 1024px) {
-    .signup-container {
-        width: 50%;
-    }
-}
 
-@media screen and (max-width: 768px) {
-    .signup-container {
-        width: 60%;
-    }
-}
-
-@media screen and (max-width: 425px) {
-    .signup-container {
+@media screen and (max-width:576px){
+    .card-response{
         width: 90%;
-        margin-top: 50px;
     }
-}
-
-@media screen and (max-width: 375px) {
-    .signup-container {
-        padding: 25px 32px;
-    }
-
-    .signup-container .form-title {
-        font-size: 22px !important;
-    }
-
-    .signup-container form {
-        margin-top: 20px !important;
-    }
-}
+} 
+ 

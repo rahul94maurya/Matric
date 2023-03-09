@@ -1,22 +1,10 @@
-.header{
-    top: 30px !important;
-    left: 60px !important;
-    cursor: pointer;
-}
-.header-title{
-    color: #DF6404;
-}
-
 .response{
     top: 30%;
     background: #FBFBFB 0% 0% no-repeat padding-box;
-}
-.errorMsg{
-    color: red;
 }
 
 @media (max-width:576px){
     .response{
         width: 90%;
     }
-}
+} 

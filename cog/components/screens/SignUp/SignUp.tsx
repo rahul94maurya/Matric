@@ -5,7 +5,7 @@ import HeaderLogo from '../../common/HeaderLogo/HeaderLogo';
 import { emailValidation } from "../../../utility/emailValidation";
 import { passwordValidation } from "../../../utility/passwordValidation";
 import { textValidation } from '../../../utility/textValidation';
-
+import StartMark from '../../common/StarMark/StartMark';
 const initialState = {
     fname: '',
     lname: '',
@@ -189,35 +189,36 @@ const SignUp = () => {
     return (
         <>
             <HeaderLogo/>
-            <div className='signup-container card'>
+            <div className="container col-lg-4 col-md-6 position-relative card card-response">
+            {/* <div className='signup-container card'> */}
                 <div className='row m-0'>
                     <div className='col-lg-12'>
                         <h3 className='d-flex align-items-center justify-content-center heading'>Create an Account</h3>
                     </div>
                     <div className='col-lg-12'>
-                        <form>
+                        <form autoComplete="off">
                             <div className='form-group'>
                                 <div className='row'>
                                     <div className='col-lg-6'>
-                                        <div className='mt-3 fw-bold form-label'>First Name <span className='star-mark'>*</span></div>
+                                        <div className='mt-3 fw-bold form-label'>First Name <StartMark/></div>
                                         <input type='text' placeholder='Enter your first name' name="fname" className='form-control' onChange={handleChange} value={inputField.fname} />
                                         {hasError ? <span className='errorMsg'>{errorMessage.fname} </span> : ''}
                                     </div>
                                     <div className='col-lg-6'>
-                                        <div className='mt-3 fw-bold form-label'>Last Name <span className='star-mark'>*</span></div>
+                                        <div className='mt-3 fw-bold form-label'>Last Name <StartMark/></div>
                                         <input type='text' placeholder='Enter your last name' name="lname" className='form-control' onChange={handleChange} value={inputField.lname} />
                                         {hasError ? <span className='errorMsg'>{errorMessage.lname} </span> : ''}
                                     </div>
                                 </div>
-                                <div className='mt-3 fw-bold form-label'>Email Address <span className='star-mark'>*</span></div>
+                                <div className='mt-3 fw-bold form-label'>Email Address <StartMark/></div>
                                 <input type='email' placeholder='Enter your company email address' name="email" className='form-control' onChange={handleChange} value={inputField.email} />
                                 {hasError ? <span className='errorMsg'>{errorMessage.email} </span> : ''}
 
-                                <div className='mt-3 fw-bold form-label'>Password <span className='star-mark'>*</span></div>
+                                <div className='mt-3 fw-bold form-label'>Password <StartMark/></div>
                                 <input type='password' placeholder='Enter your password' name="password" className='form-control' onChange={handleChange} value={inputField.password} />
                                 {hasError ? <span className='errorMsg'>{errorMessage.password} </span> : ''}
 
-                                <div className='mt-3 fw-bold form-label'>Confirm Password <span className='star-mark'>*</span></div>
+                                <div className='mt-3 fw-bold form-label'>Confirm Password <StartMark/></div>
                                 <input type='password' placeholder='Enter your confirm password' name="cpassword" className='form-control' onChange={handleChange} value={inputField.cpassword} />
                                 {hasError ? <span className='errorMsg'>{errorMessage.cpassword} </span> : ''}
 
@@ -225,11 +226,14 @@ const SignUp = () => {
                             </div>
                         </form>
                     </div>
-                    <div className='col-lg-12'>
-                        <div className='d-flex align-items-center justify-content-center link-space'>
-                            Already have an account ? <Link to="/login" className='text-decoration-none'> <span className='common-link ms-2 d-flex flex-wrap'>Sign In</span></Link>
+                    <div className="col-lg-12">
+                        <div className='col-lg-12'>
+                            <div className='d-flex align-items-center justify-content-center link-space'>
+                                Already have an account ? <Link to="/login" className='text-decoration-none'> <span className='common-link ms-2 d-flex flex-wrap'>Sign In</span></Link>
+                            </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </>
