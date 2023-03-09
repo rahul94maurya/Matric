@@ -190,7 +190,6 @@ const SignUp = () => {
         <>
             <HeaderLogo/>
             <div className="container col-lg-4 col-md-6 position-relative card card-response">
-            {/* <div className='signup-container card'> */}
                 <div className='row m-0'>
                     <div className='col-lg-12'>
                         <h3 className='d-flex align-items-center justify-content-center heading'>Create an Account</h3>

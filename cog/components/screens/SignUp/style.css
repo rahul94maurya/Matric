@@ -9,15 +9,8 @@
 }
 
 .card-response{
-    top: 12%;
+    top: 20%;
     background: #FBFBFB 0% 0% no-repeat padding-box;
-}
-body{
-    overflow-y: scroll;
-}
-
-.star-mark{
-    color: red;
 }
 
 @media screen and (max-width:576px){

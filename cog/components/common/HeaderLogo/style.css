@@ -6,3 +6,9 @@
 .header-title{
     color: #DF6404;
 }
+
+@media (max-width:576px){
+    .header{
+        left: 0px !important;
+    }
+}
