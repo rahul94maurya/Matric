@@ -7,14 +7,14 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './style/style.css'
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-// import store from './redux/store';
+import store from './redux/store';
 
 const container = document.getElementById('app-root')!
 const root = createRoot(container)
 root.render(
-      <BrowserRouter>
-      {/* <Provider store={store}> */}
-        <App/>
-      {/* </Provider> */}
-      </BrowserRouter>
-  )
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>
+)

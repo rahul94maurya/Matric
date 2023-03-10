@@ -1,24 +1,23 @@
 import React, { useEffect } from 'react'
-import {  useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { fetchData } from '../../../redux/reducer/userSlice'
+import { useAppSelector } from '../../../redux/store'
 
 
-
-// type airlineData = {
-//   user :[]
-// }
 
 const Dashboard = () => {
-    // const data = useSelector<currentData,currentData[]>(((state) => state.currentData))
-  
+  const user = useAppSelector(state => state.user)
+  console.log("user", user)
+  const dispatch = useDispatch()
 
-    // useEffect(() => {
-    //   dispatch(fetchData())
-    // },[])
-  
+
+  // useEffect(() => {
+  //   dispatch(fetchData())
+  // },[dispatch])
+
   return (
     <>
-        Dashboard
-
+      Dashboard
     </>
   )
 }
