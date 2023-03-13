@@ -47,20 +47,22 @@ body {
     font-weight: 500 !important;
 }
 
-.main-box {
-    position: relative;
-    left: 300px;
-    top: 100px;
-}
-
 .main-content {
     width: calc(100vw - 350px);
     margin-left: 295px;
-    margin-top: 40px;
+    margin-top: 120px;
     transition: all 0.5s;
 }
 
-.errorMsg{
+.menuBar {
+    cursor: pointer !important;
+}
+
+.star-mark {
+    color: red;
+}
+
+.errorMsg {
     color: red;
     font-size: 14px;
 }
