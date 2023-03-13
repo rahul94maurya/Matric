@@ -192,7 +192,7 @@ const SignUp = () => {
             <div className="container col-lg-4 col-md-6 position-relative card card-response">
                 <div className='row m-0'>
                     <div className='col-lg-12'>
-                        <h3 className='d-flex align-items-center justify-content-center heading'>Create an Account</h3>
+                        <h3 className='d-flex align-items-center justify-content-center  mt-3 mb-3'>Create an Account</h3>
                     </div>
                     <div className='col-lg-12'>
                         <form autoComplete="off">
@@ -227,7 +227,7 @@ const SignUp = () => {
                     </div>
                     <div className="col-lg-12">
                         <div className='col-lg-12'>
-                            <div className='d-flex align-items-center justify-content-center link-space'>
+                            <div className='d-flex align-items-center justify-content-center mt-3 mb-3'>
                                 Already have an account ? <Link to="/login" className='text-decoration-none'> <span className='common-link ms-2 d-flex flex-wrap'>Sign In</span></Link>
                             </div>
                         </div>
