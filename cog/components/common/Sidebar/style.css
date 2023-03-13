@@ -1,7 +1,7 @@
 .side-navigation {
   transition: all 0.5s;
   width: 256px;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 75px);
   background: #4A154B !important;
 }
 
