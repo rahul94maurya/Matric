@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import Header from '../components/common/Header/Header'
 import Sidebar from '../components/common/Sidebar/Sidebar'
+
 
 
 
@@ -23,13 +24,12 @@ const MainContainer = () => {
     }
     return (
         <>
-            <Header
-                onMenuBarIconClick={onMenuBarIconClick}
-            />
-            <Sidebar />
+            <Header onMenuBarIconClick={onMenuBarIconClick} />
+            <Sidebar/>
             <div className='main-content'>
                 <Outlet />
             </div>
+
         </>
     )
 }

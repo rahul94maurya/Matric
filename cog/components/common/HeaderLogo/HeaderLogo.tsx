@@ -7,7 +7,7 @@ const HeaderLogo = () => {
     <div className="row m-0">
         <div className="col-lg-12">
           <div className="position-relative header">
-            <Link to="/login" className="text-decoration-none text-dark">
+            <Link to="" className="text-decoration-none text-dark">
               <span className="fw-bold fs-5">think</span>
               <span className="fs-5">bridge</span>
               <span className="fs-5">|</span>
