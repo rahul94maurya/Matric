@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { emailValidation } from "../../../utility/emailValidation";
 import { passwordValidation } from "../../../utility/passwordValidation";
 import HeaderLogo from "../../common/HeaderLogo/HeaderLogo";
+import TogglePassword from "../../common/TogglePassword/TogglePassword";
 import "./style.css";
 
 const initialState = {
@@ -11,7 +12,9 @@ const initialState = {
 }
 const Login = () => {
   const [errorObj, setErrorObj] = useState<any>({})
-  const [form, setForm] = useState({...initialState})
+  const [form, setForm] = useState({ ...initialState })
+  const[Visible, ToggleIcon] = TogglePassword();
+
   const navigate = useNavigate()
 
 
@@ -26,7 +29,7 @@ const Login = () => {
     setErrorObj({ ...errors })
   }
 
-  const loginValidation = () : boolean => {
+  const loginValidation = (): boolean => {
     let hasError = false;
     let passwordLength = form.password?.length > 6;
     let error = { ...errorObj }
@@ -37,15 +40,15 @@ const Login = () => {
       error[`email`] = "Please enter a valid email address"
       hasError = true
     }
-    if(!form.password){
+    if (!form.password) {
       error[`password`] = "Password is required"
       hasError = true
-    }else if(!passwordValidation(form.password)){
+    } else if (!passwordValidation(form.password)) {
       error[`password`] = "Please enter a valid password(It should be a digit, an uppercase an lower case,alphanumeric,and more than 6 character)"
       hasError = true
     }
-    else if(!passwordLength){
-      error[`password`] ="Password should be at least greater 6 character"
+    else if (!passwordLength) {
+      error[`password`] = "Password should be at least greater 6 character"
       hasError = true
     }
     setErrorObj({ ...error })
@@ -57,16 +60,13 @@ const Login = () => {
       return
     }
     // console.log("value",form)
-    localStorage.setItem("data",JSON.stringify(form))
+    localStorage.setItem("data", JSON.stringify(form))
     navigate("/dashboard")
-  
-
   };
-
 
   return (
     <>
-      <HeaderLogo/>
+      <HeaderLogo />
       <div className="container  col-lg-4 col-md-6 position-relative card response">
         <div className="row m-0">
           <div className="col-lg-12">
@@ -88,12 +88,13 @@ const Login = () => {
                 {errorObj && errorObj[`email`] && <span className="errorMsg">{errorObj[`email`]}</span>}
                 <div className="mt-3 fw-bold form-label">Password</div>
                 <input
-                  type="password"
+                  type={Visible ? "text" : "password"}
                   placeholder="Enter your password"
                   className="form-control"
                   name="password"
                   onChange={handleChange}
                 />
+                 <span className="togglepass">{ToggleIcon}</span> 
                 {errorObj && errorObj[`password`] && <span className="errorMsg">{errorObj[`password`]}</span>}
                 <button
                   className="mt-3 w-100 common-btn"

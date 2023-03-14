@@ -1,10 +1,10 @@
 import React from 'react'
 import './style.css'
 
-const StartMark = () => {
+const StarMark = () => {
   return (
     <span className='star-mark'>*</span>
   )
 }
 
-export default StartMark
+export default StarMark
