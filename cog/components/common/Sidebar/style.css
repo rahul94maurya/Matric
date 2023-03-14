@@ -1,54 +1,30 @@
 .side-navigation {
-    position: fixed;
-    overflow: hidden;
-    transition: all 0.5s;
-    width: 256px;
-    bottom: 0;
-    left: 0;
-    height: calc(100vh - 90px);
-    /* height: calc(100vh - 75px); */
-    /* height: 100vh; */
-    background: #4A154B !important;
-    border-radius: 0 16px 16px 0;
-  }
-  
-  .side-navigation li:first-child {
-    margin-top: 20px;
-  }
-  
-  .side-navigation li {
-    list-style-type: none;
-  }
-  
-  .side-navigation li a {
-    text-decoration: none;
-    color: white;
-    display: block;
-    font-family: 'Roboto';
-    font-weight: normal;
-    padding: 20px;
-    position: relative;
-  }
-  
-  .side-navigation li.active a {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-  .side-navigation li.active a:after {
-    content: '';
-    position: absolute;
-    background-color: white;
-    width: 20px;
-    height: 20px;
-    transform: rotate(45deg) translateX(-50%);
-    left: 100%;
-    top: 50%;
-  }
-  .company-title{
-    padding: 25px;
-    color: #fff;
-  }
-  @media screen and (max-width:786px){
-    .side-navigation{
-      height: calc(100vh - 100px);
-    }
-  }
+  transition: all 0.5s;
+  width: 256px;
+  height: calc(100vh - 75px);
+  background: #4A154B !important;
+}
+
+.side-navigation li:first-child {
+  margin-top: 20px;
+}
+
+.side-navigation li a {
+  color: white;
+  font-family: 'Roboto';
+}
+
+.side-navigation li.active a {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.side-navigation li.active a:after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg) translateX(-50%);
+  left: 100%;
+  top: 50%;
+}
