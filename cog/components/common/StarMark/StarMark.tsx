@@ -1,9 +1,9 @@
 import React from 'react'
-
-const StartMark = () => {
+import './style.css'
+const StarMark = () => {
   return (
     <span className='star-mark'>*</span>
   )
 }
 
-export default StartMark
+export default StarMark

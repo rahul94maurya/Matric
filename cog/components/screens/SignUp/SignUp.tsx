@@ -1,22 +1,25 @@
-import React, { useState } from 'react'
+import React, { HTMLInputTypeAttribute, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './style.css'
 import HeaderLogo from '../../common/HeaderLogo/HeaderLogo';
 import { emailValidation } from "../../../utility/emailValidation";
 import { passwordValidation } from "../../../utility/passwordValidation";
 import { textValidation } from '../../../utility/textValidation';
-import StartMark from '../../common/StarMark/StartMark';
+import StarMark from '../../common/StarMark/StarMark';
+import TogglePassword from '../../common/TogglePassword/TogglePassword';
+
 const initialState = {
     fname: '',
     lname: '',
     email: '',
     password: '',
     cpassword: ''
-  }
+}
 const SignUp = () => {
     const [errorMessage, setErrorMessage] = useState<any>({});
     const [hasError, setHaserror] = useState(false)
-    const [inputField, setInputField] = useState({...initialState})
+    const [inputField, setInputField] = useState({ ...initialState })
+    const[Visible, ToggleIcon] = TogglePassword();
     
     const SignUpValidation = (name: string, value: any) => {
         let inputPassword = inputField.password;
@@ -110,7 +113,7 @@ const SignUp = () => {
                         });
                         setHaserror(true)
                     }
-                    else if(email_array[1] != 'thinkbridge.in'){
+                    else if (email_array[1] != 'thinkbridge.in') {
                         setErrorMessage({
                             ...errorMessage,
                             [name]: 'Please enter your company email address.',
@@ -177,7 +180,7 @@ const SignUp = () => {
         }));
         SignUpValidation(name, value);
 
-    } 
+    }
     const handleSubmit = (e: any,) => {
         let { name, value } = e.target;
         e.preventDefault();
@@ -188,7 +191,7 @@ const SignUp = () => {
 
     return (
         <>
-            <HeaderLogo/>
+            <HeaderLogo />
             <div className="container col-lg-4 col-md-6 position-relative card card-response">
                 <div className='row m-0'>
                     <div className='col-lg-12'>
@@ -199,25 +202,26 @@ const SignUp = () => {
                             <div className='form-group'>
                                 <div className='row'>
                                     <div className='col-lg-6'>
-                                        <div className='mt-3 fw-bold form-label'>First Name <StartMark/></div>
+                                        <div className='mt-3 fw-bold form-label'>First Name <StarMark /></div>
                                         <input type='text' placeholder='Enter your first name' name="fname" className='form-control' onChange={handleChange} value={inputField.fname} />
                                         {hasError ? <span className='errorMsg'>{errorMessage.fname} </span> : ''}
                                     </div>
                                     <div className='col-lg-6'>
-                                        <div className='mt-3 fw-bold form-label'>Last Name <StartMark/></div>
+                                        <div className='mt-3 fw-bold form-label'>Last Name <StarMark /></div>
                                         <input type='text' placeholder='Enter your last name' name="lname" className='form-control' onChange={handleChange} value={inputField.lname} />
                                         {hasError ? <span className='errorMsg'>{errorMessage.lname} </span> : ''}
                                     </div>
                                 </div>
-                                <div className='mt-3 fw-bold form-label'>Email Address <StartMark/></div>
+                                <div className='mt-3 fw-bold form-label'>Email Address <StarMark /></div>
                                 <input type='email' placeholder='Enter your company email address' name="email" className='form-control' onChange={handleChange} value={inputField.email} />
                                 {hasError ? <span className='errorMsg'>{errorMessage.email} </span> : ''}
 
-                                <div className='mt-3 fw-bold form-label'>Password <StartMark/></div>
-                                <input type='password' placeholder='Enter your password' name="password" className='form-control' onChange={handleChange} value={inputField.password} />
+                                <div className='mt-3 fw-bold form-label'>Password <StarMark /></div>
+                                <input type={Visible ? "text" : "password"} placeholder='Enter your password' name="password" className='form-control' onChange={handleChange} value={inputField.password}/>
+                                <span className="togglepass">{ToggleIcon}</span> 
                                 {hasError ? <span className='errorMsg'>{errorMessage.password} </span> : ''}
 
-                                <div className='mt-3 fw-bold form-label'>Confirm Password <StartMark/></div>
+                                <div className='mt-3 fw-bold form-label'>Confirm Password <StarMark /></div>
                                 <input type='password' placeholder='Enter your confirm password' name="cpassword" className='form-control' onChange={handleChange} value={inputField.cpassword} />
                                 {hasError ? <span className='errorMsg'>{errorMessage.cpassword} </span> : ''}
 
@@ -232,11 +236,11 @@ const SignUp = () => {
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </>
     )
-}  
+}
 
 export default SignUp

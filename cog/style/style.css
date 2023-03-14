@@ -66,3 +66,14 @@ body {
     color: red;
     font-size: 14px;
 }
+
+.togglepass {
+    float: right;
+    margin-left: -25px;
+    margin-top: -26px;
+    margin-right: 6px;
+    position: relative;
+    font-size: large;
+    z-index: 2;
+    color: #4A154B;
+}
