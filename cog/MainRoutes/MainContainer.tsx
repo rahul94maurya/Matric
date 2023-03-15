@@ -41,10 +41,10 @@ const MainContainer = () => {
         setNavBarExpanded((prevState) => !prevState)
     }
 
-    useEffect(() => {
-        window.addEventListener("resize", handleResize)
-        return () => window.removeEventListener('resize', handleResize);
-    }, [])
+    // useEffect(() => {
+    //     window.addEventListener("resize", handleResize)
+    //     return () => window.removeEventListener('resize', handleResize);
+    // }, [])
 
     return (
         <>
