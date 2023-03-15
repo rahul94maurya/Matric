@@ -27,16 +27,7 @@ const AddEditForm = () => {
                                     <button className='common-btn'>Add Member</button>
                                 </div>
 
-                                <div className='col-lg-6'>
-                                    <div className='form-label'>
-                                        <div className='d-flex align-items-center gap-3'>
-                                            <span className='form-label fw-bold'>Team's Name:</span>
-                                            <span>
-                                                <input type="text" className='form-control' placeholder='Team Name' />
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>

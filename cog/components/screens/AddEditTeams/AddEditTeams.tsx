@@ -1,14 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import './style.css'
+
+type dataType = {
+  id: number,
+  teamName: string,
+  totalMember: number
+}
+
+const dummyData :dataType[] = [
+  { id: 1, teamName: "UI", totalMember: 25 },
+  { id: 2, teamName: "Testing", totalMember: 15 },
+  { id: 3, teamName: "Quality Analyst", totalMember: 20 },
+  { id: 4, teamName: "Backend", totalMember: 215 },
+  { id: 5, teamName: "Frontend", totalMember: 205 },
+]
 
 const AddEditTeams = () => {
+  const [data, setData] = useState([...dummyData])
   const navigate = useNavigate()
   const handleClik = () => {
     navigate("/addEditForm")
   }
 
-  const cardClick = () => {
-    console.log("click")
+  const cardClick = (id:number) => {
+    console.log("click",id)
     // navigate("/addEditForm")
   }
   return (
@@ -21,35 +37,23 @@ const AddEditTeams = () => {
         </div>
       </div>
 
+
       <div className='row mt-3'>
-        <div className='col-lg-3'>
-          <div className='card' onClick={cardClick}>
-            <div>Team Name : <span>UI</span></div>
-            <div>Total Member <span>25</span></div>
-          </div>
-        </div>
-
-        <div className='col-lg-3'>
-          <div className='card'>
-            <div>Team Name : <span>UI</span></div>
-            <div>Total Member <span>25</span></div>
-          </div>
-        </div>
-
-        <div className='col-lg-3'>
-          <div className='card'>
-            <div>Team Name : <span>UI</span></div>
-            <div>Total Member <span>25</span></div>
-          </div>
-        </div>
-
-        <div className='col-lg-3'>
-          <div className='card'>
-            <div>Team Name : <span>UI</span></div>
-            <div>Total Member <span>25</span></div>
-          </div>
-        </div>
-
+        {data?.length ? data?.map((item, indx) => {
+          return (
+            <div className='col-lg-4 mt-3'>
+              <>
+                <div className='card addEditCard' key={indx} onClick={() => cardClick(item?.id)}>
+                  <div>Team Name : <span>{item?.teamName}</span></div>
+                  <div>Total Member <span>{item?.totalMember}</span></div>
+                </div>
+              </>
+            </div>
+          )
+        }) : 
+        <>
+        <div className='d-flex align-items-center justify-content-center' style={{height:"50vh"}}>No data available</div>
+        </>}
       </div>
     </>
   )
