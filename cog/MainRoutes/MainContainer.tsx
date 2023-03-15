@@ -48,12 +48,13 @@ const MainContainer = () => {
 
     return (
         <>
-            <Header onMenuBarIconClick={onMenuBarIconClick} />
+            {/* <Header onMenuBarIconClick={onMenuBarIconClick} />
             <Sidebar />
             <div className='main-content'>
                 <Outlet />
-            </div>
+            </div> */}
 
+            <Navbar/>
         </>
     )
 }
