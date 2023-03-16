@@ -1,6 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Reporting = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/reviewForm")
+    
+  }; 
   return (
     <>
       <div className="container col-lg-12 col-md-6">
@@ -23,13 +30,13 @@ const Reporting = () => {
               <td>1</td>
               <td>01-03-2023</td>
               <td>07-03-2023</td>
-              <td><button className='common-btn'>Review</button></td>
+              <td><button className='common-btn' onClick={handleClick}>Review</button></td>
             </tr>
             <tr>
               <td>2</td>
               <td>05-03-2023</td>
               <td>12-03-2023</td>
-              <td><button className='common-btn'>Review</button></td>
+              <td><button className='common-btn' onClick={handleClick}>Review</button></td>
             </tr>
           </tbody>
         </table>
@@ -55,13 +62,13 @@ const Reporting = () => {
               <td>1</td>
               <td>02-03-2023</td>
               <td>08-03-2023</td>
-              <td><button className='common-btn'>Review</button></td>
+              <td><button className='common-btn' onClick={handleClick}>Review</button></td>
             </tr>
             <tr>
               <td>2</td>
               <td>07-03-2023</td>
               <td>15-03-2023</td>
-              <td><button className='common-btn'>Review</button></td>
+              <td><button className='common-btn' onClick={handleClick}>Review</button></td>
             </tr>
           </tbody>
         </table>
@@ -87,13 +94,13 @@ const Reporting = () => {
               <td>1</td>
               <td>11-03-2023</td>
               <td>18-03-2023</td>
-              <td><button className='common-btn'>Review</button></td>
+              <td><button className='common-btn' onClick={handleClick}>Review</button></td>
             </tr>
             <tr>
               <td>2</td>
               <td>15-03-2023</td>
               <td>22-03-2023</td>
-              <td><button className='common-btn'>Review</button></td>
+              <td><button className='common-btn' onClick={handleClick}>Review</button></td>
             </tr>
           </tbody>
         </table>

@@ -18,6 +18,7 @@ const AddEditTickets = React.lazy(() => import("../components/screens/AddEditTic
 const SelfPerformance = React.lazy(() => import("../components/screens/SelfPerformance/SelfPerformance"))
 const CoWorkers = React.lazy(() => import("../components/screens/CoWorkers/CoWorkers"))
 const AddEditForm = React.lazy(() => import ("../components/screens/AddEditTeams/AddEditForm"))
+const ReviewForm = React.lazy(() => import ("../components/screens/Review/ReviewForm"))
 
 
 const MainRoutes = () => {
@@ -42,6 +43,7 @@ const MainRoutes = () => {
             <Route path="addEditTeams" element={<AddEditTeams />} />
             <Route path="addEditForm" element={<AddEditForm/>}/>
             <Route path="reporting" element={<Reporting />} />
+            <Route path="reviewForm" element={<ReviewForm />} />
             <Route path="addEditMatric" element={<AddEditMatric/>}/>
             <Route path="report" element={<Report/>}/>
             <Route path="planEditSprint" element={<PlanEditSprint/>}/>
