@@ -5,24 +5,22 @@ import { fetchData } from "../../../redux/reducer/userSlice";
 import { useAppSelector } from "../../../redux/store";
 
 const Dashboard = () => {
-  const user = useAppSelector((state) => state.user.users);
   const teams = useAppSelector((state) => state.teams.teams);
-  const teamName = teams.map((e) => e.teamName);
+    
   const navigate = useNavigate();
   const clickHandler = function () {
     navigate("/teams");
   };
-  console.log("teams", teamName);
-  const dispatch = useDispatch();
+
 
   return (
     <>
       <div>dashboard</div>
-      <div className="con">
+      <div className="">
         <div className="row mt-3">
           {teams.map((e) => (
             <div className="col-lg-3 " key={e.id} onClick={clickHandler}>
-              <div className="card card-hover">
+              <div className="card card-tab">
                 <div>
                   Team Name : <span>{e.teamName}</span>
                 </div>
