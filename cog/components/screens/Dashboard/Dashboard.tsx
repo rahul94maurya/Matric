@@ -6,18 +6,22 @@ const Dashboard = () => {
   const teams = useAppSelector((state) => state.teams.teams);
   const navigate = useNavigate();
 
-  const clickHandler = function () {
-    navigate("/teams");
+  const clickHandler = function (team: any) {
+    navigate("/teams", { state: { teamName: team } });
   };
+  // const dispatch = useDispatch();
 
   return (
     <>
-      <div>dashboard</div>
-      <div className="">
+      <div className="col">
         <div className="row mt-3">
           {teams.map((e) => (
-            <div className="col-lg-3 " key={e.id} onClick={clickHandler}>
-              <div className="card card-tab">
+            <div
+              className="col-lg-3 "
+              key={e.id}
+              onClick={() => clickHandler(e.teamName)}
+            >
+              <div className="card card-hover">
                 <div>
                   Team Name : <span>{e.teamName}</span>
                 </div>
