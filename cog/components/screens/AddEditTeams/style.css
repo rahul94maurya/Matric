@@ -1,0 +1,7 @@
+.addEditCard:hover{
+    box-shadow: 0 0 20px #aaa !important;
+    cursor: pointer;
+}
+.table-head{
+    background-color: lightgray;
+}

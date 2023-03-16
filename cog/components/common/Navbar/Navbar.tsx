@@ -39,11 +39,11 @@ const Navbar = () => {
             <div className='main-container d-flex '>
                 <div className='sidebar' id='side_nav' ref={toggleSwitch}>
                     <div className='header-box px-2 pt-3 pb-4 d-flex justify-content-between'>
-                        {/* <h1 className='fs-4 fw-bold ms-3'><span className='text-white'>thinkbridge</span></h1> */}
+                
                         <div className='navbar-brand me-auto  ms-3'>
-                        <span className='fw-bold text-white fs-4 '>think</span>
-                        <span className='text-white fs-5'>bridge</span>
-                    </div>
+                            <span className='fw-bold text-white fs-4'>think</span>
+                            <span className='text-white fs-5'>bridge</span>
+                        </div>
                         <span className='btn d-lg-none d-block close-btn  px-1 py-0  navbar-toggler-icon text-white navbar-toggler-icon' onClick={onRemoveClick}>X</span>
 
                     </div>
@@ -92,18 +92,15 @@ const Navbar = () => {
                                 </div>
                                 <button className='btn px-1 py-0 open-btn navbar-toggler-icon  mt-2 ms-2' onClick={onItemClick} ></button>
                             </div>
-                            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span className="navbar-toggler-icon"></span>
-                            </button>
-                            <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                                <ul className="navbar-nav  mb-2 mb-lg-0">
-                                    <li className="nav-item d-flex response">
-                                        <Link to="" className='nav-link active common-link'>Notification</Link>
-                                        <Link to="" className='nav-link active common-link' onClick={handleLogout}>Logout</Link>
-                                    </li>
-                                </ul>
 
-                            </div>
+                            <ul className=" ms-auto  mb-lg-0">
+                                <li className=" d-flex flex-wrap">
+                                    {/* <Link to="" className='nav-link active common-link position-realtive mt-2 me-3'>Notification</Link> */}
+                                    <Link to="" className='nav-link active common-link position-realtive mt-3 me-3' onClick={handleLogout}>Logout</Link>
+                                </li>
+                            </ul>
+
+
                         </div>
                     </nav>
 
