@@ -3,8 +3,8 @@
     min-width: 250px;
     max-width: 250px;
     overflow: hidden;
-    transition: all 0.5s; 
-    border-radius: 0 16px 16px 0; 
+    transition: all 0.5s;
+    border-radius: 0 16px 16px 0;
 }
 .content {
     min-height: 100vh;
@@ -20,11 +20,8 @@
     top: 0;
     background:white !important;
 }
-.h-color {
-    color: #eee;
-}
 
-.sidebar li a {
+#side_nav li a {
     color: white;
     display: block;
     font-family: 'Roboto';
@@ -37,17 +34,19 @@
     margin-top: 20px;
 }
 
-.sidebar li.active a {
+#side_nav li.active a {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.sidebar li.active a:after {
+#side_nav li.active a:after {
     content: '';
     position: absolute;
     background-color: white;
     left: 100%;
     top: 50%;
-
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg) translateX(-50%);
 }
 
 .sidebar li a {

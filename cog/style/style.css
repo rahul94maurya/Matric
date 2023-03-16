@@ -1,79 +1,78 @@
 html,
 body {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    font-family: 'Poppins', sans-serif !important;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif !important;
 }
 
 #app-root {
-    height: 100%;
-    /* overflow-y: auto; */
+  height: 100%;
+  /* overflow-y: auto; */
 }
 
 .card {
-    padding: 10px;
-    border: none !important;
-    box-shadow: 0px 0px 6px #ccc !important;
-    border-radius: 4px !important;
+  padding: 10px;
+  border: none !important;
+  box-shadow: 0px 0px 6px #ccc !important;
+  border-radius: 4px !important;
 }
 
 .form-control:focus {
-    box-shadow: none !important;
-    border: 1px solid #ced4da;
+  box-shadow: none !important;
+  border: 1px solid #ced4da;
 }
 
 .common-btn {
-    background-color: #4A154B !important;
-    font-weight: 500 !important;
-    font-size: 16px !important;
-    color: #ffff !important;
-    border: none !important;
-    border-radius: 4px 4px 4px 4px;
-    padding: 8px 30px 8px 30px;
+  background-color: #4a154b !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  color: #ffff !important;
+  border: none !important;
+  border-radius: 4px 4px 4px 4px;
+  padding: 8px 30px 8px 30px;
 }
 
 .common-btn:hover {
-    background-color: #4A154B21 !important;
-    font-weight: 500 !important;
-    font-size: 16px !important;
-    color: #4A154B !important;
-    border-color: #4A154B !important;
+  background-color: #4a154b21 !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  color: #4a154b !important;
+  border-color: #4a154b !important;
 }
-
 .common-link {
-    color: #DF6404 !important;
-    font-size: 16px !important;
-    font-weight: 500 !important;
-}
-
-.main-content {
-    width: calc(100vw - 350px);
-    margin-left: 295px;
-    margin-top: 120px;
-    transition: all 0.5s;
+  color: #df6404 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
 }
 
 .menuBar {
-    cursor: pointer !important;
+  cursor: pointer !important;
 }
 
 .star-mark {
-    color: red;
+  color: red;
 }
 
 .errorMsg {
-    color: red;
-    font-size: 14px;
+  color: red;
+  font-size: 14px;
 }
 
 .togglepass {
-    float: right;
-    margin-left: -25px;
-    margin-top: -26px;
-    margin-right: 6px;
-    position: relative;
-    font-size: large;
-    z-index: 2;
-    color: #4A154B;
+  float: right;
+  margin-left: -25px;
+  margin-top: -26px;
+  margin-right: 6px;
+  position: relative;
+  font-size: large;
+  z-index: 2;
+  color: #4a154b;
+}
+.card-hover {
+  cursor: grab;
+}
+.card-tab:hover{
+  box-shadow: 0 0 20px #aaa !important;
+  cursor: pointer;
 }

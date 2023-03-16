@@ -1,13 +1,12 @@
-import React, {FC} from 'react'
-import MainRoutes from './MainRoutes/MainRoutes'
+import React, { FC } from "react";
+import MainRoutes from "./MainRoutes/MainRoutes";
 
 const App: FC = () => {
-
   return (
     <>
-    <MainRoutes/>
+      <MainRoutes />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
