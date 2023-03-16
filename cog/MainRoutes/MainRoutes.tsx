@@ -33,6 +33,8 @@ const MainRoutes = () => {
           <Route path="/forgot-password" element={<ForgotPassword />} />,
           <Route path="*" element={<Login />} />
         </Route>
+
+        
         {/** Protected Routes */}
         {/** Wrap all authenticated Route under ProtectedRoutes element */}
         <Route path="/" element={<ProtectedRoutes />}>

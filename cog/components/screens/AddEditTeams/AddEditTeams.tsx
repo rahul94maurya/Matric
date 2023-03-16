@@ -19,20 +19,22 @@ const dummyData :dataType[] = [
 const AddEditTeams = () => {
   const [data, setData] = useState([...dummyData])
   const navigate = useNavigate()
-  const handleClik = () => {
+  
+  
+  const handleClick = () => {
     navigate("/addEditForm")
   }
 
   const cardClick = (id:number) => {
-    console.log("click",id)
-    // navigate("/addEditForm")
+    // console.log("click",id)
+    navigate("/addEditForm")
   }
   return (
     <>
       <div className='row m-0'>
         <div className='col-lg-12'>
           <div className='d-flex align-items-center justify-content-end'>
-            <button className='common-btn' type='button' onClick={handleClik}>Add Team</button>
+            <button className='common-btn' type='button' onClick={handleClick}>Add Team</button>
           </div>
         </div>
       </div>
@@ -41,9 +43,9 @@ const AddEditTeams = () => {
       <div className='row mt-3'>
         {data?.length ? data?.map((item, indx) => {
           return (
-            <div className='col-lg-4 mt-3'>
+            <div className='col-lg-4 mt-3' key={indx}>
               <>
-                <div className='card addEditCard' key={indx} onClick={() => cardClick(item?.id)}>
+                <div className='card addEditCard'  onClick={() => cardClick(item?.id)}>
                   <div>Team Name : <span>{item?.teamName}</span></div>
                   <div>Total Member <span>{item?.totalMember}</span></div>
                 </div>

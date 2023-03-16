@@ -59,7 +59,6 @@ const Login = () => {
     if (loginValidation()) {
       return
     }
-    // console.log("value",form)
     localStorage.setItem("data", JSON.stringify(form))
     navigate("/dashboard")
   };
