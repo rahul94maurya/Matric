@@ -39,7 +39,6 @@ const AddEditForm = React.lazy(
 const teams = React.lazy(() => import("../components/screens/Dashboard/teams"));
 
 const MainRoutes = () => {
-  console.log("routing");
   return (
     <>
       <React.Suspense>

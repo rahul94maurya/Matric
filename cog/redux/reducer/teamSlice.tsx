@@ -12,13 +12,13 @@ const initialState = {
           sprints: [
             {
               sprintNo: 1,
-              startDate: "1/4/2023",
-              dueDate: "12/5/2023",
+              startDate: "10/4/2023",
+              dueDate: "30/5/2023",
             },
             {
               sprintNo: 2,
-              startDate: "1/4/2023",
-              dueDate: "12/5/2023",
+              startDate: "15/4/2023",
+              dueDate: "1/5/2023",
             },
           ],
         },
@@ -49,15 +49,15 @@ const initialState = {
           allowToSeePerformance: "No",
           ticketAssigned: [
             {
-              ticketNumer: 124,
-              ticketDescription: "this is demo",
+              ticketNumber: 124,
+              ticketDescription: "sprint no:1 , quarter: april-june ",
               quarter: "april-june",
-              sprintNo: 2,
+              sprintNo: 1,
             },
             {
-              ticketNumer: 125,
-              ticketDescription: "this is demo",
-              quarter: "april-june",
+              ticketNumber: 125,
+              ticketDescription: "sprint no:2 , quarter: jan-march ",
+              quarter: "jan-march",
               sprintNo: 2,
             },
           ],
@@ -72,15 +72,15 @@ const initialState = {
           allowToSeePerformance: "No",
           ticketAssigned: [
             {
-              ticketNumer: 130,
-              ticketDescription: "this is demo",
+              ticketNumber: 130,
+              ticketDescription: "sprint no:1 , quarter: april-june ",
               quarter: "april-june",
-              sprintNo: 2,
+              sprintNo: 1,
             },
             {
-              ticketNumer: 135,
-              ticketDescription: "this is demo",
-              quarter: "april-june",
+              ticketNumber: 135,
+              ticketDescription: "sprint no:2 , quarter: jan-march ",
+              quarter: "jan-march",
               sprintNo: 2,
             },
           ],
@@ -95,15 +95,15 @@ const initialState = {
           allowToSeePerformance: "No",
           ticketAssigned: [
             {
-              ticketNumer: 14,
-              ticketDescription: "this is demo",
+              ticketNumber: 14,
+              ticketDescription: "sprint no:1 , quarter: april-june",
               quarter: "april-june",
-              sprintNo: 2,
+              sprintNo: 1,
             },
             {
-              ticketNumer: 25,
-              ticketDescription: "this is demo",
-              quarter: "april-june",
+              ticketNumber: 25,
+              ticketDescription: "sprint no:2 , quarter: jan-march",
+              quarter: "jan-march",
               sprintNo: 2,
             },
           ],
@@ -156,36 +156,13 @@ const initialState = {
           allowToSeePerformance: "No",
           ticketAssigned: [
             {
-              ticketNumer: 124,
+              ticketNumber: 124,
               ticketDescription: "this is demo",
               quarter: "april-june",
               sprintNo: 2,
             },
             {
-              ticketNumer: 125,
-              ticketDescription: "this is demo",
-              quarter: "april-june",
-              sprintNo: 2,
-            },
-          ],
-        },
-        {
-          id: 1245,
-          name: "rahul",
-          role: ["SD", "ML", "DL"],
-          ifOnlyMLThenSD: "demo",
-          allowAddEditTeams: "yes",
-          allowAddEditSprint: "yes",
-          allowToSeePerformance: "No",
-          ticketAssigned: [
-            {
-              ticketNumer: 124,
-              ticketDescription: "this is demo",
-              quarter: "april-june",
-              sprintNo: 2,
-            },
-            {
-              ticketNumer: 125,
+              ticketNumber: 125,
               ticketDescription: "this is demo",
               quarter: "april-june",
               sprintNo: 2,
@@ -202,13 +179,36 @@ const initialState = {
           allowToSeePerformance: "No",
           ticketAssigned: [
             {
-              ticketNumer: 124,
+              ticketNumber: 124,
               ticketDescription: "this is demo",
               quarter: "april-june",
               sprintNo: 2,
             },
             {
-              ticketNumer: 125,
+              ticketNumber: 125,
+              ticketDescription: "this is demo",
+              quarter: "april-june",
+              sprintNo: 2,
+            },
+          ],
+        },
+        {
+          id: 1245,
+          name: "rahul",
+          role: ["SD", "ML", "DL"],
+          ifOnlyMLThenSD: "demo",
+          allowAddEditTeams: "yes",
+          allowAddEditSprint: "yes",
+          allowToSeePerformance: "No",
+          ticketAssigned: [
+            {
+              ticketNumber: 124,
+              ticketDescription: "this is demo",
+              quarter: "april-june",
+              sprintNo: 2,
+            },
+            {
+              ticketNumber: 125,
               ticketDescription: "this is demo",
               quarter: "april-june",
               sprintNo: 2,
@@ -263,36 +263,13 @@ const initialState = {
           allowToSeePerformance: "No",
           ticketAssigned: [
             {
-              ticketNumer: 124,
+              ticketNumber: 124,
               ticketDescription: "this is demo",
               quarter: "april-june",
               sprintNo: 2,
             },
             {
-              ticketNumer: 125,
-              ticketDescription: "this is demo",
-              quarter: "april-june",
-              sprintNo: 2,
-            },
-          ],
-        },
-        {
-          id: 1245,
-          name: "rahul",
-          role: ["SD", "ML", "DL"],
-          ifOnlyMLThenSD: "demo",
-          allowAddEditTeams: "yes",
-          allowAddEditSprint: "yes",
-          allowToSeePerformance: "No",
-          ticketAssigned: [
-            {
-              ticketNumer: 124,
-              ticketDescription: "this is demo",
-              quarter: "april-june",
-              sprintNo: 2,
-            },
-            {
-              ticketNumer: 125,
+              ticketNumber: 125,
               ticketDescription: "this is demo",
               quarter: "april-june",
               sprintNo: 2,
@@ -309,13 +286,36 @@ const initialState = {
           allowToSeePerformance: "No",
           ticketAssigned: [
             {
-              ticketNumer: 124,
+              ticketNumber: 124,
               ticketDescription: "this is demo",
               quarter: "april-june",
               sprintNo: 2,
             },
             {
-              ticketNumer: 125,
+              ticketNumber: 125,
+              ticketDescription: "this is demo",
+              quarter: "april-june",
+              sprintNo: 2,
+            },
+          ],
+        },
+        {
+          id: 1245,
+          name: "rahul",
+          role: ["SD", "ML", "DL"],
+          ifOnlyMLThenSD: "demo",
+          allowAddEditTeams: "yes",
+          allowAddEditSprint: "yes",
+          allowToSeePerformance: "No",
+          ticketAssigned: [
+            {
+              ticketNumber: 124,
+              ticketDescription: "this is demo",
+              quarter: "april-june",
+              sprintNo: 2,
+            },
+            {
+              ticketNumber: 125,
               ticketDescription: "this is demo",
               quarter: "april-june",
               sprintNo: 2,

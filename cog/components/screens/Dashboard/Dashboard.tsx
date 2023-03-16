@@ -9,15 +9,14 @@ const Dashboard = () => {
   const teams = useAppSelector((state) => state.teams.teams);
   const teamName = teams.map((e) => e.teamName);
   const navigate = useNavigate();
+
   const clickHandler = function (team: any) {
     navigate("/teams", { state: { teamName: team } });
   };
-  console.log("teams", teamName);
   const dispatch = useDispatch();
 
   return (
     <>
-      <div>dashboard</div>
       <div className="col">
         <div className="row mt-3">
           {teams.map((e) => (
