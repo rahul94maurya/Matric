@@ -1,28 +1,19 @@
 import React, { useState } from 'react'
+import { useAppSelector } from '../../../redux/store'
 import './style.css'
 
-type dataType = {
-    id: number,
-    name: string,
-    role: string[]
-}
-
-
-const tableDummyData: dataType[] = [
-    { id: 1, name: "John doe", role: ["SD,ML"] },
-    { id: 2, name: "Sasil", role: ["SD"] },
-    { id: 3, name: "Martha", role: ["SD,ML,DL"] },
-    { id: 4, name: "Alex", role: ["SD,ML"] },
-]
 
 const AddEditForm = () => {
+    const teams = useAppSelector((state) => state.teams.teams);
+    // console.log("teams",teams)
+
     const [show, setShow] = useState<any>({
         showModal: false,
     })
-    const [data, setData] = useState([...tableDummyData])
 
-    const handleDelete = (id:any) => {
-        alert("Are you sure to delete it")
+    const handleDelete = (id: any,name:string) => {
+        // console.log("id",id)
+        alert(`Are you sure to delete it ${name} records`)
     }
     const handleModal = (e: any) => {
         setShow({
@@ -52,35 +43,36 @@ const AddEditForm = () => {
                     </div>
                 </div>
 
-
                 <div className='row mt-5'>
                     <div className='col-lg-12'>
                         <table className='table table-hover text-center'>
-                            <thead className='table-head'>
+                            <thead className='table-head' >
                                 <tr>
                                     <th>Member</th>
                                     <th>Role</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            {data?.length ? data?.map((item, indx) => {
-                                return (
-
-                                    <tbody key={indx}>
-                                        <tr>
-                                            <th className='fw-normal'>{item?.name}</th>
-                                            <th className='fw-normal'>{item?.role}</th>
-                                            <th className='d-flex gap-5 align-items-center justify-content-center'>
-                                                <button type='button' className='common-btn fw-normal'>Edit</button>
-                                                <button type='button' className='common-btn fw-normal' onClick={() => handleDelete(item.id)}>Delete</button>
-                                            </th>
-                                        </tr>
-                                    </tbody>
-                                )
-                            }) :
-                             <>
-                            <div className='d-flex align-items-center justify-content-center' style={{height:"50vh"}}>No data available</div>
-                            </>}
+                            <tbody>
+                                {teams?.length ? teams?.map((item) => {
+                                    return item?.members?.map((i) => {
+                                        return (
+                                            <>
+                                                <tr key={i?.id}>
+                                                    <th className='fw-normal text-capitalize'>{i?.name}</th>
+                                                    <th className='fw-normal'>{i?.role}</th>
+                                                    <th className='d-flex gap-5 align-items-center justify-content-center'>
+                                                        <button className='common-btn' type='button'>Edit</button>
+                                                        <button className='common-btn' type='button' onClick={() => handleDelete(i?.id,i.name)}>Delete</button>
+                                                    </th>
+                                                </tr>
+                                            </>
+                                        )
+                                    })
+                                }) : <>
+                                    <div className='d-flex align-items-center justify-content-end'>No data available</div>
+                                </>}
+                            </tbody>
                         </table>
                     </div>
                 </div>

@@ -1,3 +1,6 @@
 .table-head{
     background-color: lightgray;
 }
+.no-data{
+    height: 50vh;
+}
