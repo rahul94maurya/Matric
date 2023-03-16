@@ -44,7 +44,7 @@ const AddEditTeams = () => {
           )
         }) : 
         <>
-        <div className='d-flex align-items-center justify-content-center' style={{height:"50vh"}}>No data available</div>
+        <div className='d-flex align-items-center justify-content-center no-data'>No data available</div>
         </>}
       </div>
     </>
