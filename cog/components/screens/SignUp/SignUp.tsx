@@ -19,8 +19,8 @@ const SignUp = () => {
     const [errorMessage, setErrorMessage] = useState<any>({});
     const [hasError, setHaserror] = useState(false)
     const [inputField, setInputField] = useState({ ...initialState })
-    const[Visible, ToggleIcon] = TogglePassword();
-    
+    const [Visible, ToggleIcon] = TogglePassword();
+
     const SignUpValidation = (name: string, value: any) => {
         let inputPassword = inputField.password;
         let passwordLength = value?.length > 6;
@@ -217,8 +217,8 @@ const SignUp = () => {
                                 {hasError ? <span className='errorMsg'>{errorMessage.email} </span> : ''}
 
                                 <div className='mt-3 fw-bold form-label'>Password <StarMark /></div>
-                                <input type={Visible ? "text" : "password"} placeholder='Enter your password' name="password" className='form-control' onChange={handleChange} value={inputField.password}/>
-                                <span className="togglepass">{ToggleIcon}</span> 
+                                <input type={Visible ? "text" : "password"} placeholder='Enter your password' name="password" className='form-control' onChange={handleChange} value={inputField.password} />
+                                <span className="togglepass">{ToggleIcon}</span>
                                 {hasError ? <span className='errorMsg'>{errorMessage.password} </span> : ''}
 
                                 <div className='mt-3 fw-bold form-label'>Confirm Password <StarMark /></div>

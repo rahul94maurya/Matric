@@ -46,13 +46,6 @@ body {
   font-weight: 500 !important;
 }
 
-.main-content {
-  width: calc(100vw - 350px);
-  margin-left: 295px;
-  margin-top: 120px;
-  transition: all 0.5s;
-}
-
 .menuBar {
   cursor: pointer !important;
 }
