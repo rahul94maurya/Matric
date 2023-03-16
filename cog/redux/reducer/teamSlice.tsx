@@ -219,7 +219,7 @@ const initialState = {
     },
     {
       id: 3,
-      teamName: "xyz",
+      teamName: "def",
       quarters: [
         {
           quarterName: "april-june",
