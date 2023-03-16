@@ -39,7 +39,6 @@ const AddEditForm = React.lazy(
 const teams = React.lazy(() => import("../components/screens/Dashboard/teams"));
 
 const MainRoutes = () => {
-  console.log("routing");
   return (
     <>
       <React.Suspense>
@@ -70,25 +69,7 @@ const MainRoutes = () => {
               <Route path="coWorkers" element={<CoWorkers />} />
               <Route path="*" element={<Navigate to="/dashboard" />} />
             </Route>
-            {/** Protected Routes */}
-            {/** Wrap all authenticated Route under ProtectedRoutes element */}
-            <Route path="/" element={<ProtectedRoutes />}>
-              <Route path="/" element={<MainContainer />}>
-                <Route path="/" element={<Navigate replace to="dashboard" />} />
-                <Route path="dashboard" element={<Dashboard />} />
-                <Route path="teams" element={<Teams />} />
-                <Route path="addEditTeams" element={<AddEditTeams />} />
-                <Route path="addEditForm" element={<AddEditForm />} />
-                <Route path="reporting" element={<Reporting />} />
-                <Route path="addEditMatric" element={<AddEditMatric />} />
-                <Route path="report" element={<Report />} />
-                <Route path="planEditSprint" element={<PlanEditSprint />} />
-                <Route path="addEditTickets" element={<AddEditTickets />} />
-                <Route path="selfPerformance" element={<SelfPerformance />} />
-                <Route path="coWorkers" element={<CoWorkers />} />
-                <Route path="*" element={<Navigate to="/dashboard" />} />
-              </Route>
-            </Route>
+           
           </Route>
         </Routes>
       </React.Suspense>

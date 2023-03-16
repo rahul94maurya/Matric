@@ -1,23 +1,12 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useAppSelector } from '../../../redux/store';
 import './style.css'
 
-type dataType = {
-  id: number,
-  teamName: string,
-  totalMember: number
-}
-
-const dummyData :dataType[] = [
-  { id: 1, teamName: "UI", totalMember: 25 },
-  { id: 2, teamName: "Testing", totalMember: 15 },
-  { id: 3, teamName: "Quality Analyst", totalMember: 20 },
-  { id: 4, teamName: "Backend", totalMember: 215 },
-  { id: 5, teamName: "Frontend", totalMember: 205 },
-]
 
 const AddEditTeams = () => {
-  const [data, setData] = useState([...dummyData])
+  const teams = useAppSelector((state) => state.teams.teams);
+
   const navigate = useNavigate()
   
   
@@ -41,13 +30,13 @@ const AddEditTeams = () => {
 
 
       <div className='row mt-3'>
-        {data?.length ? data?.map((item, indx) => {
+        {teams?.length ? teams?.map((item, indx) => {
           return (
             <div className='col-lg-4 mt-3' key={indx}>
               <>
-                <div className='card addEditCard'  onClick={() => cardClick(item?.id)}>
+                <div className='card card-tab'  onClick={() => cardClick(item?.id)}>
                   <div>Team Name : <span>{item?.teamName}</span></div>
-                  <div>Total Member <span>{item?.totalMember}</span></div>
+                  <div>Total Member <span>{item?.members.length}</span></div>
                 </div>
               </>
             </div>
