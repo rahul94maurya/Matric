@@ -58,6 +58,7 @@ const MainRoutes = () => {
             <Route path="/" element={<MainContainer />}>
               <Route path="/" element={<Navigate replace to="dashboard" />} />
               <Route path="dashboard" element={<Dashboard />} />
+              <Route path="teams" element={<Teams />} />
               <Route path="addEditTeams" element={<AddEditTeams />} />
               <Route path="addEditForm" element={<AddEditForm />} />
               <Route path="reporting" element={<Reporting />} />
@@ -69,7 +70,6 @@ const MainRoutes = () => {
               <Route path="coWorkers" element={<CoWorkers />} />
               <Route path="*" element={<Navigate to="/dashboard" />} />
             </Route>
-           
           </Route>
         </Routes>
       </React.Suspense>
