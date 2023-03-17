@@ -36,8 +36,8 @@ const Navbar = () => {
     return (
         <>
 
-            <div className='main-container d-flex '>
-                <div className='sidebar' id='side_nav' ref={toggleSwitch}>
+            <div className='main-container d-flex'>
+                <div className='sidebar ' id='side_nav' ref={toggleSwitch}>
                     <div className='header-box px-2 pt-3 pb-4 d-flex justify-content-between'>
                 
                         <div className='navbar-brand me-auto  ms-3'>
@@ -80,8 +80,8 @@ const Navbar = () => {
 
                 </div>
 
-                <div className='content'>
-                    <nav className="navbar navbar-expand-lg navbar-light card bg-transparent">
+                <div className='content '>
+                    <nav className="navbar navbar-expand-lg  navbar-light card bg-transparent" id='header_nav'>
                         <div className="container">
 
                             <div className='d-flex justify-content-between d-lg-none d-block'>
@@ -104,7 +104,7 @@ const Navbar = () => {
                         </div>
                     </nav>
 
-                    <div className='me-3 ms-4 mt-3'>
+                    <div className='me-1 p-3 ms-2 mt-3 page-content'>
                         <Outlet />
                     </div>
                 </div>
