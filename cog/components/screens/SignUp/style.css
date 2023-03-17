@@ -9,5 +9,13 @@
     .card-response{
         width: 90%;
     }
+    body{
+      overflow: scroll ;
+    }
+} 
+@media screen and (max-width:1280px){
+    body{
+      overflow: scroll ;
+    }
 } 
  
