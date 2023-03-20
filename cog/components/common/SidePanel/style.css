@@ -5,6 +5,9 @@
     overflow: hidden;
     transition: all 0.5s;
     border-radius: 0 16px 16px 0;
+    position: fixed;
+    height: 100%;
+    z-index: 1;
 }
 
 #header_nav{

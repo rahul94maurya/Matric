@@ -37,7 +37,7 @@ const AddEditForm = () => {
                                         </span>
                                     </div>
                                 </div>
-                                <button className='common-btn' onClick={(e) => handleModal(e)}>Add Member</button>
+                                <button className='common-btn' onClick={(e) => handleModal(e)} data-bs-toggle="modal" data-bs-target="#exampleModal">Add Member</button>
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@ const AddEditForm = () => {
                                                     <th className='fw-normal'>{i?.role}</th>
                                                     <th className='d-flex gap-5 align-items-center justify-content-center'>
                                                         <button className='common-btn' type='button'>Edit</button>
-                                                        <button className='common-btn' type='button' onClick={() => handleDelete(i?.id,i.name)}>Delete</button>
+                                                        <button className='common-btn' type='button' onClick={() => handleDelete(i?.id, i.name)}>Delete</button>
                                                     </th>
                                                 </tr>
                                             </>
@@ -74,6 +74,81 @@ const AddEditForm = () => {
                                 </>}
                             </tbody>
                         </table>
+                    </div>
+                </div>
+            </div>
+
+
+            <div className="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="exampleModalLabel">Add Team Member</h5>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div className="modal-body">
+                            <div className='row'>
+                                <div className='col-lg-12'>
+                                    <div className=''>
+                                        <label className='fs-5'>Name:</label>
+                                        <input type="text" name="" placeholder='Enter your team member name' className='form-control'/>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div className='row'>
+                            <div className='col-lg-12'>
+                                <div className='d-flex align-items-center gap-3 mt-3'>
+                                        <label className='fs-5'>Role:</label> 
+                                     
+                                            <input type="checkbox" className='form-check-input check'  /> 
+                                            <label className='form-check-label'>SD</label>   
+                                            <input type="checkbox" className='form-check-input check'  /> 
+                                            <label className='form-check-label'>MD</label> 
+                                            <input type="checkbox" className='form-check-input check'  /> 
+                                            <label className='form-check-label'>DL</label> 
+                                         
+                                    </div> 
+                                </div>
+                            </div>
+
+                            <div className='row'>
+                                <div className='col-lg-12 mt-3'>
+                                    <label>If only SD,then name ML:</label>
+                                    <input type="text" className='form-control' placeholder='Enter Module Lead name'/>
+                                </div>
+                            </div>
+
+                            <div className='row'>
+                                <div className='col-lg-12 mt-3 d-flex align-items-center gap-5'>
+                                        <label className='fs-5'>Allow member to add/edit team:</label>
+                                    <div className='form-check form-switch'>
+                                        <input type="checkbox" className='form-check-input' />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='row'>
+                                <div className='col-lg-12 mt-3 d-flex align-items-center gap-5'>
+                                        <label className='fs-5'>Allow member to add/edit sprint:</label>
+                                    <div className='form-check form-switch'>
+                                        <input type="checkbox" className='form-check-input' />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='row'>
+                                <div className='col-lg-12 mt-3 d-flex align-items-center gap-4'>
+                                        <label className='fs-5'>Allow member to see performance:</label>
+                                    <div className='form-check form-switch'>
+                                        <input type="checkbox" className='form-check-input' />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="modal-footer">
+                            <button type="button" className="common-btn" data-bs-dismiss="modal">Close</button>
+                            <button type="button" className="common-btn">Save</button>
+                        </div>
                     </div>
                 </div>
             </div>

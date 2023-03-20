@@ -4,7 +4,7 @@ import './style.css'
 const ReviewForm = () => {
     return (
         <>
-            <div className="container ">
+            <div className="ms-5">
                 <div className='row m-0'>
                     <div className='col-lg-12'>
                         <div className='form-group'>
