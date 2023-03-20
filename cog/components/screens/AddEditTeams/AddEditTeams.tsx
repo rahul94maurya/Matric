@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAppSelector } from '../../../redux/store';
-import Card from '../../sections/card';
 import './style.css'
 
 
@@ -35,12 +34,10 @@ const AddEditTeams = () => {
           return (
             <div className='col-lg-4 mt-3' key={indx}>
               <>
-                <Card>
-                <div className='menuBar'  onClick={() => cardClick(item?.id)}>
+                <div className='card card-tab'  onClick={() => cardClick(item?.id)}>
                   <div>Team Name : <span>{item?.teamName}</span></div>
                   <div>Total Member <span>{item?.members.length}</span></div>
                 </div>
-                </Card>
               </>
             </div>
           )
