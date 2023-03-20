@@ -7,11 +7,11 @@
     border-radius: 0 16px 16px 0;
 }
 
-/* #header_nav{
+#header_nav{
     position: sticky;
     top: 0;
     background:white !important;
-} */
+}
 
 #side_nav li a {
     color: white;
