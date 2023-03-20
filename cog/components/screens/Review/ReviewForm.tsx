@@ -134,33 +134,29 @@ const ReviewForm = () => {
                                 <div>Comment : </div><textarea name="comment" id=""></textarea>
 
 
-                                <div className='mt-3 fw-bold form-label'>Outcomes </div>
+                                {/* <div className='mt-3 fw-bold form-label'>Outcomes </div>
                                 <p className="para-text">Attributes for Outcomes : Throughput , No Of Story Points Cover , Estimation Accuracy , Sprint Velocity </p>
                                 <div className='row'>
                                     <div className='col-lg-3'>Q.1 :  XYZ</div> 
-                                    {/* <div className="col-lg-3 rating"> <input type="radio" name="rating" value="5" id="5"/><label htmlFor="5">☆</label> <input type="radio" name="rating" value="4" id="4"/><label htmlFor="4">☆</label> <input type="radio" name="rating" value="3" id="3"/><label htmlFor="3">☆</label> <input type="radio" name="rating" value="2" id="2"/><label htmlFor="2">☆</label> <input type="radio" name="rating" value="1" id="1"/><label htmlFor="1">☆</label> </div> */}
                                     <div className="col-lg-3 input-rate"><input type="text" /></div>
                                 </div>
                                 <div className='row'>
                                     <div className='col-lg-3'>Q.2 :  ABC</div> 
-                                    {/* <div className="col-lg-3 rating"> <input type="radio" name="rating" value="5" id="5"/><label htmlFor="5">☆</label> <input type="radio" name="rating" value="4" id="4"/><label htmlFor="4">☆</label> <input type="radio" name="rating" value="3" id="3"/><label htmlFor="3">☆</label> <input type="radio" name="rating" value="2" id="2"/><label htmlFor="2">☆</label> <input type="radio" name="rating" value="1" id="1"/><label htmlFor="1">☆</label> </div> */}
                                     <div className="col-lg-3 input-rate"><input type="text" /></div>
                                 </div>
-                                <div>Comment : </div><textarea name="comment" id=""></textarea>
+                                <div>Comment : </div><textarea name="comment" id=""></textarea> */}
 
-                                <div className='mt-3 fw-bold form-label'>Ownership </div>
+                                {/* <div className='mt-3 fw-bold form-label'>Ownership </div>
                                 <p className="para-text">Attributes for Ownership : Going Beyond , Team/Client Rapport , Team Building , Accelerators , Collaborative Problem Solving </p>
                                 <div className='row'>
                                     <div className='col-lg-3'>Q.1 :  XYZ</div> 
-                                    {/* <div className="col-lg-3 rating"> <input type="radio" name="rating" value="5" id="5"/><label htmlFor="5">☆</label> <input type="radio" name="rating" value="4" id="4"/><label htmlFor="4">☆</label> <input type="radio" name="rating" value="3" id="3"/><label htmlFor="3">☆</label> <input type="radio" name="rating" value="2" id="2"/><label htmlFor="2">☆</label> <input type="radio" name="rating" value="1" id="1"/><label htmlFor="1">☆</label> </div> */}
                                     <div className="col-lg-3 input-rate"><input type="text" /></div>
                                 </div>
                                 <div className='row'>
                                     <div className='col-lg-3'>Q.2 :  ABC</div> 
-                                    {/* <div className="col-lg-3 rating"> <input type="radio" name="rating" value="5" id="5"/><label htmlFor="5">☆</label> <input type="radio" name="rating" value="4" id="4"/><label htmlFor="4">☆</label> <input type="radio" name="rating" value="3" id="3"/><label htmlFor="3">☆</label> <input type="radio" name="rating" value="2" id="2"/><label htmlFor="2">☆</label> <input type="radio" name="rating" value="1" id="1"/><label htmlFor="1">☆</label> </div> */}
                                     <div className="col-lg-3 input-rate"><input type="text" /></div>
                                 </div>
-                                <div>Comment : </div><textarea name="comment" id=""></textarea>
+                                <div>Comment : </div><textarea name="comment" id=""></textarea> */}
 
                             </div>
                             <div className='col-lg-3'>
