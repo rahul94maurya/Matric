@@ -134,7 +134,7 @@ const ReviewForm = () => {
                                 <div>Comment : </div><textarea name="comment" id=""></textarea>
 
 
-                                {/* <div className='mt-3 fw-bold form-label'>Outcomes </div>
+                                <div className='mt-3 fw-bold form-label'>Outcomes </div>
                                 <p className="para-text">Attributes for Outcomes : Throughput , No Of Story Points Cover , Estimation Accuracy , Sprint Velocity </p>
                                 <div className='row'>
                                     <div className='col-lg-3'>Q.1 :  XYZ</div> 
@@ -144,9 +144,9 @@ const ReviewForm = () => {
                                     <div className='col-lg-3'>Q.2 :  ABC</div> 
                                     <div className="col-lg-3 input-rate"><input type="text" /></div>
                                 </div>
-                                <div>Comment : </div><textarea name="comment" id=""></textarea> */}
+                                <div>Comment : </div><textarea name="comment" id=""></textarea>
 
-                                {/* <div className='mt-3 fw-bold form-label'>Ownership </div>
+                                <div className='mt-3 fw-bold form-label'>Ownership </div>
                                 <p className="para-text">Attributes for Ownership : Going Beyond , Team/Client Rapport , Team Building , Accelerators , Collaborative Problem Solving </p>
                                 <div className='row'>
                                     <div className='col-lg-3'>Q.1 :  XYZ</div> 
@@ -156,7 +156,7 @@ const ReviewForm = () => {
                                     <div className='col-lg-3'>Q.2 :  ABC</div> 
                                     <div className="col-lg-3 input-rate"><input type="text" /></div>
                                 </div>
-                                <div>Comment : </div><textarea name="comment" id=""></textarea> */}
+                                <div>Comment : </div><textarea name="comment" id=""></textarea>
 
                             </div>
                             <div className='col-lg-3'>
