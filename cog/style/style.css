@@ -76,3 +76,13 @@ body {
   box-shadow: 0 0 20px #aaa !important;
   cursor: pointer;
 }
+.content {
+  min-height: 100vh;
+  width: 100%;
+  
+}
+
+.page-content{
+  overflow:auto;
+  height:100vh;
+}
