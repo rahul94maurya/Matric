@@ -4,3 +4,26 @@
 .no-data{
     height: 50vh;
 }
+
+
+.check{
+  height: 20px;
+  width: 20px;
+  background: #fff;
+  border: 1px solid #2fdd92;
+  border-radius: 20px;
+  box-shadow: none !important;
+  border: 1px solid #ced4da;
+}
+
+.check[type="checkbox"] {
+  border-radius: 20px;
+  box-shadow: none !important;
+  border: 1px solid #ced4da;
+}
+
+.check:checked {
+  background: #2fdd92;
+  box-shadow: none !important;
+  border: 1px solid #ced4da;
+}
