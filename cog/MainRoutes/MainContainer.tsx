@@ -30,7 +30,7 @@ const MainContainer = () => {
                 </div>
                 <div className='content'>
                     <Header onItemClick={onItemClick} />
-                    <div className='me-1 p-3 ms-2 mt-3 page-content'>
+                    <div className='p-3 mt-3 me-1 page-content'>
                         <Outlet />
                     </div>
                 </div>
