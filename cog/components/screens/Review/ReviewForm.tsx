@@ -108,7 +108,7 @@ const ReviewForm = () => {
                                 <div className='mt-3 fw-bold form-label'>Accountability </div>
                                 <p className="para-text">Attributes for Accountability : Learnability , Code/Tool/Stack Exploration , Process adherence , Time Responsible(self and others) , Skills Development , Professionalism </p>
                                 <div className='row'>
-                                    <div className='col-lg-3 '>Q.1 :  XYZ</div> 
+                                    <div className='col-lg-3 '>Q.1 :  X YZ</div> 
                                     {/* <div className="col-lg-3 rating"> <input type="radio" name="rating" value="5" id="5"/><label htmlFor="5">☆</label> <input type="radio" name="rating" value="4" id="4"/><label htmlFor="4">☆</label> <input type="radio" name="rating" value="3" id="3"/><label htmlFor="3">☆</label> <input type="radio" name="rating" value="2" id="2"/><label htmlFor="2">☆</label> <input type="radio" name="rating" value="1" id="1"/><label htmlFor="1">☆</label> </div> */}
                                     <div className="col-lg-3 input-rate"><input type="text" /></div>
                                 </div>
