@@ -10,7 +10,7 @@ const Reporting = () => {
   };
   return (
     <>
-      <div className="col-lg-12 col-md-6 ms-2">
+      <div className="container col-lg-12 ">
         <div className='row'>
           <div className='col-lg-12'>
             <h5 className='d-flex mt-3 mb-3 font-weight-bold'>Team 1</h5>
@@ -21,10 +21,10 @@ const Reporting = () => {
                 <th>Reporting To</th>
                 <th>Sprint No</th>
                 <th>Start Date</th>
-                <th>Due Date</th>
+                <th>Due Date</th> 
                 <th>Action</th>
               </tr>
-            </thead>
+            </thead> 
             <tbody>
               <tr>
                 <td rowSpan={2} className="">Ravi</td>
