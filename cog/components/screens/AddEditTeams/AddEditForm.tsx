@@ -31,7 +31,7 @@ const AddEditForm = () => {
                 <div className='row'>
                     <div className='col-lg-12'>
                         <div className='form-group'>
-                            <div className='d-flex justify-content-between'>
+                            <div className='d-flex justify-content-between flex-wrap'>
 
                                 <div className='form-label'>
                                     <div className='d-flex align-items-center gap-3'>
@@ -42,13 +42,14 @@ const AddEditForm = () => {
                                     </div>
                                 </div>
                                 <button className='common-btn' onClick={handleModal} data-bs-toggle="modal" data-bs-target="#exampleModal">Add Member</button>
+                                {/* data-bs-toggle="modal" data-bs-target="#exampleModal" */}
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div className='row mt-5'>
-                    <div className='col-lg-12'>
+                    <div className='col-lg-12 table-responsive'>
                         <table className='table table-hover text-center'>
                             <thead className='table-head' >
                                 <tr>
