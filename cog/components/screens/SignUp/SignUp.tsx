@@ -192,7 +192,7 @@ const SignUp = () => {
     return (
         <>
             <HeaderLogo />
-            <div className="container col-lg-4 col-md-6 position-relative card card-response">
+            <div className="container col-lg-4 col-md-6  card card-response">
                 <div className='row m-0'>
                     <div className='col-lg-12'>
                         <h3 className='d-flex align-items-center justify-content-center  mt-3 mb-3'>Create an Account</h3>

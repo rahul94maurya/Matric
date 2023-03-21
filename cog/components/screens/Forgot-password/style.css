@@ -1,5 +1,8 @@
 .forgot {
-  top: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   background: #fbfbfb 0% 0% no-repeat padding-box;
 }
 @media (max-width: 576px) {

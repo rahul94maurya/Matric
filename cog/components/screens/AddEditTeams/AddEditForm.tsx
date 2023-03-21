@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
 import { useAppSelector } from '../../../redux/store'
 import './style.css'
 
@@ -10,10 +11,14 @@ const AddEditForm = () => {
     const [show, setShow] = useState<any>({
         showModal: false,
     })
-
+    const {id} = useParams()
     const handleDelete = (id: any,name:string) => {
         // console.log("id",id)
         alert(`Are you sure to delete it ${name} records`)
+    }
+
+    const handleEdit = (id:number) => {
+        // console.log("id",id)
     }
     const handleModal = (e: any) => {
         setShow({
@@ -21,6 +26,7 @@ const AddEditForm = () => {
             showModal: true
         })
     }
+
     return (
         <>
             <div className='container'>
@@ -62,7 +68,7 @@ const AddEditForm = () => {
                                                     <th className='fw-normal text-capitalize'>{i?.name}</th>
                                                     <th className='fw-normal'>{i?.role}</th>
                                                     <th className='d-flex gap-5 align-items-center justify-content-center'>
-                                                        <button className='common-btn' type='button'>Edit</button>
+                                                        <button className='common-btn' type='button' data-bs-toggle="modal" data-bs-target="#exampleModalEdit" onClick={() => handleEdit(i?.id)}>Edit</button>
                                                         <button className='common-btn' type='button' onClick={() => handleDelete(i?.id, i.name)}>Delete</button>
                                                     </th>
                                                 </tr>
@@ -153,13 +159,12 @@ const AddEditForm = () => {
                 </div>
             </div>
 
-            {/* {show?.showModal && (
-                <>
-                 <div className="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+           {/* EditModal */}
+                 <div className="modal fade" id="exampleModalEdit" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">Add Team Member</h5>
+                            <h5 className="modal-title" id="exampleModalLabel">Update Team Member</h5>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
@@ -228,8 +233,7 @@ const AddEditForm = () => {
                     </div>
                 </div>
             </div>
-                </>
-            )} */}
+             
         </>
     )
 }

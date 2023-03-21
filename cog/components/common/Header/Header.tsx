@@ -7,6 +7,8 @@ type ButtonClick = {
 
 const Header = (props: ButtonClick) => {
     const navigate = useNavigate()
+
+    
     const handleLogout = (e: any) => {
         e.preventDefault()
         localStorage.removeItem("data")
@@ -15,7 +17,7 @@ const Header = (props: ButtonClick) => {
     }
     return (
         <>
-            <nav className="navbar navbar-expand-lg  navbar-light card bg-transparent position-sticky top-0" id='header_nav'>
+            <nav className="navbar navbar-expand-lg  navbar-light card bg-transparent" id='header_nav'>
                 <div className="container">
                     <div className='d-flex justify-content-between d-lg-none d-block'>
                         <div className='navbar-brand me-auto'>
