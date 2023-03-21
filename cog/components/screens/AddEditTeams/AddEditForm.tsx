@@ -6,18 +6,17 @@ import './style.css'
 
 const AddEditForm = () => {
     const teams = useAppSelector((state) => state.teams.teams);
-    // console.log("teams",teams)
 
     const [show, setShow] = useState<any>({
         showModal: false,
     })
-    const {id} = useParams()
-    const handleDelete = (id: any,name:string) => {
+
+    const handleDelete = (id: any, name: string) => {
         // console.log("id",id)
         alert(`Are you sure to delete it ${name} records`)
     }
 
-    const handleEdit = (id:number) => {
+    const handleEdit = (id: number) => {
         // console.log("id",id)
     }
     const handleModal = (e: any) => {
@@ -97,36 +96,36 @@ const AddEditForm = () => {
                                 <div className='col-lg-12'>
                                     <div className=''>
                                         <label className='fs-5'>Name:</label>
-                                        <input type="text" name="" placeholder='Enter your team member name' className='form-control'/>
-                                    </div> 
+                                        <input type="text" name="" placeholder='Enter your team member name' className='form-control' />
+                                    </div>
                                 </div>
                             </div>
                             <div className='row'>
-                            <div className='col-lg-12'>
-                                <div className='d-flex align-items-center gap-3 mt-3'>
-                                        <label className='fs-5'>Role:</label> 
-                                     
-                                            <input type="checkbox" className='form-check-input check'  /> 
-                                            <label className='form-check-label'>SD</label>   
-                                            <input type="checkbox" className='form-check-input check'  /> 
-                                            <label className='form-check-label'>MD</label> 
-                                            <input type="checkbox" className='form-check-input check'  /> 
-                                            <label className='form-check-label'>DL</label> 
-                                         
-                                    </div> 
+                                <div className='col-lg-12'>
+                                    <div className='d-flex align-items-center gap-3 mt-3'>
+                                        <label className='fs-5'>Role:</label>
+
+                                        <input type="checkbox" className='form-check-input check' />
+                                        <label className='form-check-label'>SD</label>
+                                        <input type="checkbox" className='form-check-input check' />
+                                        <label className='form-check-label'>MD</label>
+                                        <input type="checkbox" className='form-check-input check' />
+                                        <label className='form-check-label'>DL</label>
+
+                                    </div>
                                 </div>
                             </div>
 
                             <div className='row'>
                                 <div className='col-lg-12 mt-3'>
                                     <label>If only SD,then name ML:</label>
-                                    <input type="text" className='form-control' placeholder='Enter Module Lead name'/>
+                                    <input type="text" className='form-control' placeholder='Enter Module Lead name' />
                                 </div>
                             </div>
 
                             <div className='row'>
                                 <div className='col-lg-12 mt-3 d-flex align-items-center gap-5'>
-                                        <label className='fs-5'>Allow member to add/edit team:</label>
+                                    <label className='fs-5'>Allow member to add/edit team:</label>
                                     <div className='form-check form-switch'>
                                         <input type="checkbox" className='form-check-input' />
                                     </div>
@@ -135,7 +134,7 @@ const AddEditForm = () => {
 
                             <div className='row'>
                                 <div className='col-lg-12 mt-3 d-flex align-items-center gap-5'>
-                                        <label className='fs-5'>Allow member to add/edit sprint:</label>
+                                    <label className='fs-5'>Allow member to add/edit sprint:</label>
                                     <div className='form-check form-switch'>
                                         <input type="checkbox" className='form-check-input' />
                                     </div>
@@ -144,7 +143,7 @@ const AddEditForm = () => {
 
                             <div className='row'>
                                 <div className='col-lg-12 mt-3 d-flex align-items-center gap-4'>
-                                        <label className='fs-5'>Allow member to see performance:</label>
+                                    <label className='fs-5'>Allow member to see performance:</label>
                                     <div className='form-check form-switch'>
                                         <input type="checkbox" className='form-check-input' />
                                     </div>
@@ -159,8 +158,8 @@ const AddEditForm = () => {
                 </div>
             </div>
 
-           {/* EditModal */}
-                 <div className="modal fade" id="exampleModalEdit" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            {/* EditModal */}
+            <div className="modal fade" id="exampleModalEdit" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
@@ -172,36 +171,36 @@ const AddEditForm = () => {
                                 <div className='col-lg-12'>
                                     <div className=''>
                                         <label className='fs-5'>Name:</label>
-                                        <input type="text" name="" placeholder='Enter your team member name' className='form-control'/>
-                                    </div> 
+                                        <input type="text" name="" placeholder='Enter your team member name' className='form-control' />
+                                    </div>
                                 </div>
                             </div>
                             <div className='row'>
-                            <div className='col-lg-12'>
-                                <div className='d-flex align-items-center gap-3 mt-3'>
-                                        <label className='fs-5'>Role:</label> 
-                                     
-                                            <input type="checkbox" className='form-check-input check'  /> 
-                                            <label className='form-check-label'>SD</label>   
-                                            <input type="checkbox" className='form-check-input check'  /> 
-                                            <label className='form-check-label'>MD</label> 
-                                            <input type="checkbox" className='form-check-input check'  /> 
-                                            <label className='form-check-label'>DL</label> 
-                                         
-                                    </div> 
+                                <div className='col-lg-12'>
+                                    <div className='d-flex align-items-center gap-3 mt-3'>
+                                        <label className='fs-5'>Role:</label>
+
+                                        <input type="checkbox" className='form-check-input check' />
+                                        <label className='form-check-label'>SD</label>
+                                        <input type="checkbox" className='form-check-input check' />
+                                        <label className='form-check-label'>MD</label>
+                                        <input type="checkbox" className='form-check-input check' />
+                                        <label className='form-check-label'>DL</label>
+
+                                    </div>
                                 </div>
                             </div>
 
                             <div className='row'>
                                 <div className='col-lg-12 mt-3'>
                                     <label>If only SD,then name ML:</label>
-                                    <input type="text" className='form-control' placeholder='Enter Module Lead name'/>
+                                    <input type="text" className='form-control' placeholder='Enter Module Lead name' />
                                 </div>
                             </div>
 
                             <div className='row'>
                                 <div className='col-lg-12 mt-3 d-flex align-items-center gap-5'>
-                                        <label className='fs-5'>Allow member to add/edit team:</label>
+                                    <label className='fs-5'>Allow member to add/edit team:</label>
                                     <div className='form-check form-switch'>
                                         <input type="checkbox" className='form-check-input' />
                                     </div>
@@ -210,7 +209,7 @@ const AddEditForm = () => {
 
                             <div className='row'>
                                 <div className='col-lg-12 mt-3 d-flex align-items-center gap-5'>
-                                        <label className='fs-5'>Allow member to add/edit sprint:</label>
+                                    <label className='fs-5'>Allow member to add/edit sprint:</label>
                                     <div className='form-check form-switch'>
                                         <input type="checkbox" className='form-check-input' />
                                     </div>
@@ -219,7 +218,7 @@ const AddEditForm = () => {
 
                             <div className='row'>
                                 <div className='col-lg-12 mt-3 d-flex align-items-center gap-4'>
-                                        <label className='fs-5'>Allow member to see performance:</label>
+                                    <label className='fs-5'>Allow member to see performance:</label>
                                     <div className='form-check form-switch'>
                                         <input type="checkbox" className='form-check-input' />
                                     </div>
@@ -233,7 +232,7 @@ const AddEditForm = () => {
                     </div>
                 </div>
             </div>
-             
+
         </>
     )
 }
