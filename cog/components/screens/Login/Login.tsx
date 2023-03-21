@@ -66,7 +66,7 @@ const Login = () => {
   return (
     <>
       <HeaderLogo />
-      <div className="container  col-lg-4 col-md-6 position-relative card response">
+      <div className="container  col-lg-4 col-md-6 card response">
         <div className="row m-0">
           <div className="col-lg-12">
             <h3 className="d-flex align-items-center justify-content-center">
