@@ -1,20 +1,23 @@
-
-.card-response{
-    top: 200px;
-    background: #FBFBFB 0% 0% no-repeat padding-box;
+.card-response {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #FBFBFB 0% 0% no-repeat padding-box;
 }
 
-@media screen and (max-width:576px){
-    .card-response{
-        width: 90%;
-    }
-    body{
-      overflow: scroll ;
-    }
-} 
-@media screen and (max-width:1280px){
-    body{
-      overflow: scroll ;
-    }
-} 
- 
+@media screen and (max-width:576px) {
+  .card-response {
+    width: 90%;
+  }
+
+  body {
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  body {
+    overflow: scroll;
+  }
+}

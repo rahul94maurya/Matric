@@ -10,12 +10,6 @@
     z-index: 1;
 }
 
-#header_nav{
-    position: sticky;
-    top: 0;
-    background:white !important;
-}
-
 #side_nav li a {
     color: white;
     display: block;
