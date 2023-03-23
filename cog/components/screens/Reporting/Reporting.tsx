@@ -10,12 +10,12 @@ const Reporting = () => {
   };
   return (
     <>
-      <div className="container col-lg-12 ">
-        <div className='row'>
+      <div className="container col-lg-12 table-responsive">
+        <div className='row '>
           <div className='col-lg-12'>
             <h5 className='d-flex mt-3 mb-3 font-weight-bold'>Team 1</h5>
           </div>
-          <table id="example" className="table" >
+          <table id="example" className="table " >
             <thead>
               <tr>
                 <th>Reporting To</th>
