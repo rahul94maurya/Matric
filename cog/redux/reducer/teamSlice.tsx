@@ -30,7 +30,7 @@ const initialState = {
               startDate: "1/4/2023",
               dueDate: "12/5/2023",
             },
-            {
+            {  
               sprintNo: 2,
               startDate: "1/4/2023",
               dueDate: "12/5/2023",
