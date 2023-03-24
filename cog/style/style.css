@@ -17,6 +17,10 @@ body {
   box-shadow: none !important;
   border: 1px solid #ced4da;
 }
+.form-check-input:focus{
+  box-shadow: none;
+  border: 1px solid #ced4da;
+}
 
 .common-btn {
   background-color: #4a154b !important;
