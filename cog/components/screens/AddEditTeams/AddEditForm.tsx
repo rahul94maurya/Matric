@@ -162,7 +162,7 @@ const AddEditForm = () => {
             openModal: false
         })
         setForm({ ...initialState })
-        console.log("formdata", form)
+        // console.log("formdata", form)
     }
 
     const handleEdit = (id: number,name:string) => {
@@ -279,7 +279,7 @@ const AddEditForm = () => {
                                         </span>
                                     </div>
                                 </div>
-                                <button className='common-btn' onClick={handleShowModal} >Add Member</button>
+                                <button className='common-btn' onClick={handleShowModal}data-bs-toggle="modal" data-bs-target="#exampleModal" >Add Member</button>
                             </div>
                         </div>
                     </div>
@@ -322,7 +322,7 @@ const AddEditForm = () => {
 
 
             {showModal?.openModal && (
-                <div className="modal d-block" tabIndex={-1} role="dialog" aria-hidden="true" >
+                <div className="modal d-block" tabIndex={-1} id="exampleModal"  aria-labelledby="exampleModalLabel"  role="dialog" aria-hidden="true" >
                     <div className="modal-dialog" role="document">
                         <form autoComplete='off'>
                             <div className="modal-content">
